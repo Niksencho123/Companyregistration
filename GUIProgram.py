@@ -1,6 +1,8 @@
 import time
 from tkinter import *
 def get_data():
+    final_window.deiconify()
+    root.withdraw()
     final_label = Label(final_window, text= f"The company is registrated to {input1.get()} {input2.get()}. The name is {input3.get()} and it has a capital of {input4.get()}$")
     final_label.pack()
 root = Tk()
@@ -8,6 +10,7 @@ root.title("REGISTRATION")
 root.geometry("400x200")
 final_window = Tk()
 final_window.title("RESULT")
+final_window.withdraw()
 label = Label(text= "                                    COMPANY REGISTRATION                                  ")
 label.pack()
 label1 = Label(text= "FIRST NAME")
